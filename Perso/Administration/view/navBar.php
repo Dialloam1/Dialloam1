@@ -15,7 +15,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-green">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">CEFISI</a>
+            <a class="navbar-brand" style="width: 00px " href="#">CEFISI</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,16 +33,16 @@
                         </div>
                     </nav>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
-                            Gestion
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Campus</a></li>
-                            <li><a class="dropdown-item" href="#">Administration</a></li>
-                        </ul>
-                        
-                    </li>
+                    <div class="input-group mb-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"> Gestion</a>
+                        </li>
+                        <select class="form-select" id="inputGroupSelect02">
+                            <option value="1">Campus</option>
+                            <option value="2">Administration</option>
+                        </select>
+
+                    </div>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Déconnexion</a>
                     </li>

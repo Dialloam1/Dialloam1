@@ -1,5 +1,6 @@
 <?php
 include('controller/navBarController.php');
+include_once('view/navBar.php');
 $navBar = new NavBarController;
 
 ?>
