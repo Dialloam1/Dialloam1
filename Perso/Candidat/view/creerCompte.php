@@ -27,8 +27,10 @@
             <label for="mdp" class="form-label"> Confirmer le mot de passe</label>
             <input type="password" class="form-control" name="mdp" id="mdp" placeholder=" confirmer votre mdp">
         </div> <br>
+
+        <h4>Choisir un mot de passe de passe d'au moins 8 caractères</h4> <br>
         <div>
-            <button type="submit" class="btn btn-primary mb-3">Se connecter</button>
+            <button type="submit" class="btn btn-primary mb-3"> Valider </button>
         </div>
     </form>
 

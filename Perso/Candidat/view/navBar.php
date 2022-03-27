@@ -8,13 +8,13 @@
     <title> navBar Candidat</title>
     <link rel="stylesheet" href="../assets/bootstrap-5.1.3-dist/css/bootstrap.css">
     <script src="../assets/bootstrap-5.1.3-dist/js/bootstrap.js"></script>
-    <style>
+    <!--<style>
         #acc {
             display: block;
             color: blue;
         }
     </style>
-
+    -->
 </head>
 
 <body>

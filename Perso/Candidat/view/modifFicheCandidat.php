@@ -16,8 +16,8 @@
 
     <div>
         <label for="nom" class="form-label">Genre :</label>
-        Homme <input type="radio" class="form-control" name="homme" id="H">
-        Femme <input type="radio" class="form-control" name="femme" id="F">
+        Homme <input type="radio" class="form-control" name="genre" id="H">
+        Femme <input type="radio" class="form-control" name="genre" id="F">
     </div> <br>
 
     <div>
