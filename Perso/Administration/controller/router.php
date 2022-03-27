@@ -1,8 +1,4 @@
 <?php
-//include_once('view/index.php');
-//include_once('header.php');
-//include_once('model/bdd.php');
-
 $page = @$_GET["page"];
 
 switch ($page) {

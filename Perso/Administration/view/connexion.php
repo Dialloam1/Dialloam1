@@ -15,34 +15,27 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-green">
             <div class="container-fluid">
                 <a class="navbar-brand" style="width: 800px " href="#">CEFISI</a>
+            </div>
 
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Formations</a>
-                        </li>
-                        <nav class="navbar navbar-light bg-primary">
-                            <div class="container-fluid">
-                                <form class="d-flex">
-                                    <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit">Rechercher</button>
-                                </form>
-                            </div>
-                        </nav>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
-                                Gestion
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Campus</a></li>
-                                <li><a class="dropdown-item" href="#">Administration</a></li>
-                            </ul>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Déconnexion</a>
-                        </li>
     </header>
     <main>
+        <h2>Connexion</h2>
+        <form action="" method="post" class="container-sm">
 
+            <div>
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="entrez votre email">
+            </div>
+
+            <div>
+                <label for="mdp" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" name="mdp" id="mdp" placeholder="entrez votre mdp">
+            </div> <br>
+
+            <div>
+                <button type="submit" class="btn btn-primary mb-3">Se connecter</button>
+            </div>
+        </form>
 
     </main>
 </body>

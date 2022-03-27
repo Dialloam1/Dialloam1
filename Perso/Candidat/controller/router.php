@@ -3,7 +3,7 @@
 $page = @$_GET["page"];
 
 switch ($page) {
-    case '':
+    case 'accueil':
         include_once("view/inscriptionCdtConnecte.php");
         break;
     case 'formation':

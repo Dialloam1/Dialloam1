@@ -9,10 +9,13 @@
 
     <link rel="stylesheet" href="assets/bootstrap-5.1.3-dist/css/bootstrap.css">
     <script src="assets/bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
     
 
 </head>
 
 <body>
 </body>
-    
+<header>
+        <?php $navBar->navBar(); ?>
+</header>
