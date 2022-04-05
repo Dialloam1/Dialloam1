@@ -12,20 +12,21 @@
 </ol> <br> <br>
 
 <h3> Inscrivez-vous</h3> <br>
+
     <form action="" method="post" class="container-sm">
 
         <div>
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="entrez votre email">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="entrez votre email" required>
         </div>
 
         <div>
             <label for="mdp" class="form-label">Mot de passe</label>
-            <input type="password" class="form-control" name="mdp" id="mdp" placeholder="entrez votre mdp">
+            <input type="password" class="form-control" name="mdp" id="mdp" placeholder="entrez votre mdp" required>
         </div> <br>
         <div>
             <label for="mdp" class="form-label"> Confirmer le mot de passe</label>
-            <input type="password" class="form-control" name="mdp" id="mdp" placeholder=" confirmer votre mdp">
+            <input type="password" class="form-control" name="mdp" id="mdp2" placeholder=" confirmer votre mdp" required>
         </div> <br>
 
         <h4>Choisir un mot de passe de passe d'au moins 8 caractères</h4> <br>
@@ -59,21 +60,3 @@
 
 
 
-<!--
-<div>
-    <div>
-        Nom : <?= $user['nom'] ?>
-    </div>
-    <div>
-        Prénom : <?= $user['prenom'] ?>
-    </div>
-    <div>
-        tel : <?= $user['tel'] ?>
-    </div>
-    <div>
-        email : <?= $user['email'] ?>
-    </div>
-
-    <a href="?page=creermoncompte">Créer mon compte</a>
-</div>
--->

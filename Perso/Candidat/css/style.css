@@ -2,3 +2,68 @@
     display: block;
     color: blue;
 }
+* {
+    margin: 0px;
+    padding: 0px;
+    color: #333;
+    box-sizing: border-box;
+  }
+  main {
+    width: 90%;
+    margin: auto;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    margin: auto;
+  }
+  form > * {
+    align-self: flex-start;
+  }
+  form > button {
+    align-self: flex-end;
+  }
+  
+  .error {
+    color: salmon;
+  }
+  .success {
+    color: lightseagreen;
+  }
+  main {
+  width: 90%;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  margin: auto;
+}
+form > * {
+  align-self: flex-start;
+}
+form > button {
+  align-self: flex-end;
+}
+
+#error {
+  color: salmon;
+}
+.success {
+  color: lightseagreen;
+}
+footer {
+    height: 10rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+  }
