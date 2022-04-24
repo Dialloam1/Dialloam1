@@ -1,7 +1,7 @@
 <?php
 include_once('./controller/navbarController.php');
 
-$nav = New NavBarController;
+$nav = new NavBarController;
 ?>
 
 <!DOCTYPE html>
@@ -16,10 +16,11 @@ $nav = New NavBarController;
     <link rel="stylesheet" href="./assets/bootstrap-5.1.3-dist/css/bootstrap.css">
     <script src="./assets/bootstrap-5.1.3-dist/js/bootstrap.js"></script>
 
+
 </head>
 
 <body>
-
+        
     <header>
         <?php $nav->afficheNavBar(); ?>
     </header>

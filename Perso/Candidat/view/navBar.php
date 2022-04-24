@@ -4,18 +4,17 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-    
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Formations</a>
+
+        <ul class="navbar-nav">
+            <li> <a href="?page=inscriptionCandidat"> page d'Accueil candidat</a></li>
+      
+               <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Formations</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Profil</a>
+                <li class="nav-item"><a class="nav-link" href="#">Profil</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Déconnexion</a>
-                </li>
-            </ul>
-        
+                <li class="nav-item"><a class="nav-link" href="#">Déconnexion</a></li>
+              
+        </ul>
+
     </div>
 </nav>
