@@ -1,3 +1,4 @@
+<script src="../css/style.css"></script>
 <?php
 
 //$email = "dialloam5@aa.com";
@@ -27,32 +28,32 @@ if(veriEmail($email)){
 }
 */
 ?>
-<?php
-   @$genre=$_POST["genre"];
-   @$nom=$_POST["nom"];
-   @$prenom=$_POST["prenom"];
-   @$email=$_POST["email"];
-   @$pass=$_POST["mdp"];
-   @$repass=$_POST["mdp2"];
-   @$valider=$_POST["valider"];
+*<?php
+/**   
+ *  @$nom=$_POST["nom"];
+  * @$prenom=$_POST["prenom"];
+   *@$email=$_POST["email"];
+   *@$pass=$_POST["mdp"];
+   *@$repass=$_POST["mdp2"];
+   *@$valider=$_POST["valider"];
    
-   if(isset($valider)){
-      if(empty($nom))
-         $message='<div class="erreur">Nom laissé vide.</div>';
-      elseif(empty($prenom))
-         $message='<div class="erreur">Prénom laissé vide.</div>';
-      elseif(empty($email))
-         $message='<div class="erreur">Email laissé vide.</div>';
-      elseif(empty($mdp))
-         $message='<div class="erreur">Mot de passe laissé vide.</div>';
-      elseif($pass!=$mdp2)
-         $message='<div class="erreur">Les mots de passe ne sont pas identiques.</div>';
-      else{
-         $message='<div class="rappel"><b>Rappel:</b><br />';
-         $message.=$genre.' '.ucfirst(strtolower($prenom)).' '.strtoupper($nom).'<br />';
-         $message.='email: '.$email;
-         $message.='</div>';
-      }
-   }
+  * if(isset($valider)){
+     * if(empty($nom))
+      *   $message='<div class="erreur">Nom laissé vide.</div>';
+      *elseif(empty($prenom))
+      *   $message='<div class="erreur">Prénom laissé vide.</div>';
+     * elseif(empty($email))
+      *   $message='<div class="erreur">Email laissé vide.</div>';
+      *elseif(empty($mdp))
+      *   $message='<div class="erreur">Mot de passe laissé vide.</div>';
+     * elseif($pass!=$mdp2)
+      *   $message='<div class="erreur">Les mots de passe ne sont pas identiques.</div>';
+     * else{
+      *   $message='<div class="rappel"><b>Rappel:</b><br />';
+      *   $message.=$genre.' '.ucfirst(strtolower($prenom)).' '.strtoupper($nom).'<br />';
+      *   $message.='email: '.$email;
+      *   $message.='</div>';
+     * }
+ *  }
 
-?>
+*?>

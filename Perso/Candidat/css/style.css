@@ -67,17 +67,25 @@ footer {
   position: absolute;
   bottom: 0;
 }
-.label{
-  margin-bottom:4px;
-  font:10pt arial;
-  color:#AAAAAA;
-} 
+.label {
+  margin-bottom: 4px;
+  font: 10pt arial;
+  color: #aaaaaa;
+}
 .champ {
   margin-bottom: 20px;
 }
 .erreur {
   font: 10pt arial;
   color: #dd0000;
+  background-color: #eeeeee;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.rappel {
+  font: 10pt arial;
+  color: #888888;
   background-color: #eeeeee;
   padding: 10px;
   border-radius: 10px;

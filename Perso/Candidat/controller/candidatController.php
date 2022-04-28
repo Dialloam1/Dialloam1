@@ -31,6 +31,8 @@ class CandidatController extends CandidatModel
     {
         $this->email_candidat = trim($_POST['email']);
         $this->mdp_candidat = password_hash($_POST["mdp"], PASSWORD_DEFAULT);
+        //var_dump($this->email_candidat,$this->mdp_candidat);
+        //die();
         // if ($this->email_candidat != '' && $this->mdp_candidat != '' && $this->password_verify != '') {
         if ($this->email_candidat != '' && $this->mdp_candidat != '') {
             if ($this->setCandidat()) {
@@ -68,10 +70,8 @@ class CandidatController extends CandidatModel
 
     public function connexion()
     {
-
         $this->email_candidat = trim($_POST['email']);
         $this->mdp_candidat = $_POST["mdp"];
-
 
         if ($this->email_candidat != '' && $this->mdp_candidat != '') {
             $candidat = $this->getCandidatByEmail();
