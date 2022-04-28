@@ -7,31 +7,20 @@ switch ($page) {
     case 'accueil':
         include_once('candidatController.php');
         $candidat = new CandidatController;
-        if (isset($_POST['email_candidat'])) {
+        if (isset($_POST['email'])) {
             $candidat->connexion();
         } else {
-            $candidat->formCreerCompte();
+            $candidat->formConnexion();
         }
         break;
 
     case 'creerCompte':
         include_once('candidatController.php');
         $candidat = new CandidatController;
-        if (isset($_POST['email_candidat'])) {
-            $candidat->creerCompte();
-        } else {
-            $candidat->formCreerCompte();
-        }
-        break;
-
-    case 'connexion':
-        include('candidatController.php');
-        $candidat = new CandidatController;
-
         if (isset($_POST['email'])) {
-            $candidat->connexion();
+            $candidat->inscriptionCandidat();
         } else {
-            $candidat->formConnexion();
+            $candidat->formInscriptionCandidat();
         }
         break;
 
@@ -44,7 +33,7 @@ switch ($page) {
     case 'ficheCandidat':
         include_once('candidatController.php');
         $candidat = new CandidatController;
-        if (isset($_POST['email_candidat'])) {
+        if (isset($_POST['email'])) {
             $candidat->ficheCandidat();
         } else {
             $candidat->formFicheCandidat();
@@ -61,18 +50,23 @@ switch ($page) {
         include('CandidatController.php');
         $candidat = new CandidatController;
 
-        if (isset($_POST['email_candidat'])) {
+        if (isset($_POST['email'])) {
             $candidat->modifierMonCompte();
         } else {
             $candidat->formMonCompte();
         }
         break;
-
+        
     default:
         include_once('candidatController.php');
+
         $candidat = new CandidatController;
-        if (isset($_POST['email_candidat'])) {
-            $candidat->connexion();
+
+        if (isset($_POST['email'])) { 
+           $candidat->connexion();
+        }
+        else{
+             $candidat->formConnexion();
         }
         break;
 }

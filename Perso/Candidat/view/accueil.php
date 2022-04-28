@@ -1,5 +1,5 @@
 <main>
-    <!-- <h2> Accueil page Candidat /connexion </h2>-->
+    <!-- <h2> Accueil page Candidat / page connexion </h2>-->
 
     <h2>Connectez-vous</h2> <br>
     <form action="" method="post">
@@ -21,7 +21,7 @@
 
         <div>
             <h3>Première connexion ?</h3>
-            <button a href="?page=creerCompte"> Créer un compte</button>
+            <button a href="?page=inscriptionCandidat"> Créer un compte</button>
         </div> <br> <br>
 
         <div>

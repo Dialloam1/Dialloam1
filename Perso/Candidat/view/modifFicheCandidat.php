@@ -17,11 +17,12 @@
         <label for="nationNalite">Nationalité</label>
         <input type="text" name="nationalite" id="nationalite" placeholder="entrez votre nationalité" required>
     </div> <br>
-    <div>
+    <div class="champ">
         <label for="Genre">Genre :</label>
         Homme <input type="radio" name="genre" id="H">
         Femme <input type="radio" name="genre" id="F">
-    </div> <br>
+        
+    </div> <br>                         
 
     <div>
         <label for="tel">Tel portable</label>

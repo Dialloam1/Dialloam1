@@ -1,12 +1,12 @@
 <h3>Etapes de la création compte</h3>
-<!--inscription-->
+<!--page inscription-->
 <ol>
     <li>Créez un compte en renseignant le formulaire ci dessous</li>
-    <li>Vous recevrez un email sur l'adresse que vous aurez indiquée</li>
+    <!--<li>Vous recevrez un email sur l'adresse que vous aurez indiquée</li>
     <li>Consultez votre messagerie, pour cliquer sur le lien de validation dans l'email recu.
         Attention : vous disposez d'un délai d'une heure pour cliquer sur le lien, au delà il faudra
         recommencer la procédure depuis l'étape 1
-    </li>
+    </li>-->
     <li>Votre compte sera alors activé</li>
 </ol> <br> <br>
 
@@ -29,8 +29,12 @@
     </div> <br>
 
     <h4>Choisir un mot de passe d'au moins 8 caractères</h4> <br>
-    <div>
+    <!--<div>
         <button type="button"> Valider </button>
-        <!--<button type="button" onclick="verifMdp();"> Valider </button>-->
-    </div>
+        <button type="button" onclick="verifMdp();"> Valider </button>
+    </div>-->
+          
+        <div class="champ">
+            <input type="submit" name="valider" value="Valider l'inscription" />
+        </div>
 </form>

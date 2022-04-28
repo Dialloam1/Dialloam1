@@ -22,21 +22,22 @@ class CandidatController extends CandidatModel
     protected $lieu_naissance;
 
 
-    public function formCreerCompte()
+    public function formInscriptionCandidat()
     {
-        include('view/creerCompte.php');
+        include('view/inscriptionCandidat.php');
     }
 
-    public function creerCompte()
+    public function inscriptionCandidat()
     {
-        $this->email = trim($_POST['email_candidat']);
-        $this->mdp = password_hash($_POST["mdp_candidat"], PASSWORD_DEFAULT);
-        if ($this->email_candidat != '' && $this->mdp_candidat != '' && $this->password_verify != '') {
+        $this->email_candidat = trim($_POST['email']);
+        $this->mdp_candidat = password_hash($_POST["mdp"], PASSWORD_DEFAULT);
+        // if ($this->email_candidat != '' && $this->mdp_candidat != '' && $this->password_verify != '') {
+        if ($this->email_candidat != '' && $this->mdp_candidat != '') {
             if ($this->setCandidat()) {
                 echo 'inscription OK';
             }
         } else {
-            $this->formCreerCompte();
+            $this->formInscriptionCandidat();
         }
     }
 
@@ -48,8 +49,8 @@ class CandidatController extends CandidatModel
     public function ficheCandidat()
     {
 
-        $this->email = trim($_POST['email_candidat']);
-        $this->mdp = password_hash($_POST["mdp_candidat"], PASSWORD_DEFAULT);
+        $this->email_candidat = trim($_POST['email']);
+        $this->mdp_candidat = password_hash($_POST["mdp"], PASSWORD_DEFAULT);
 
         if ($this->email_candidat != '' && $this->mdp_candidat != '' && $this->password_verify != '') {
             if ($this->setCandidat()) {
@@ -60,31 +61,31 @@ class CandidatController extends CandidatModel
         }
     }
 
-
     public function formConnexion()
     {
         include_once('view/accueil.php');
-        //include_once('view/connexion.php');
     }
 
     public function connexion()
     {
-        $this->email = trim($_POST['email']);
-        $this->mdp = $_POST["mdp"];
+
+        $this->email_candidat = trim($_POST['email']);
+        $this->mdp_candidat = $_POST["mdp"];
 
 
-        if ($this->email != '' && $this->mdp != '') {
+        if ($this->email_candidat != '' && $this->mdp_candidat != '') {
             $candidat = $this->getCandidatByEmail();
 
-            if (password_verify($this->mdp, $candidat['mdp'])) {
-                $_SESSION['nom_candidat'] = $candidat['nom'];
-                $_SESSION['prenom_candidat'] = $candidat['prenom'];
-                $_SESSION['email_candidat'] = $candidat['email'];
-
+            //if (password_verify($this->mdp_candidat, $candidat['mdp_candidat'])) {
+            if ($this->mdp_candidat == $candidat['mdp_candidat']) {
+                $_SESSION['nom_candidat'] = $candidat['nom_candidat'];
+                $_SESSION['prenom_candidat'] = $candidat['prenom_candidat'];
+                $_SESSION['email_candidat'] = $candidat['email_candidat'];
                 $_SESSION['id_candidat'] = $candidat['id_candidat'];
+                echo "connexion établie";
             }
         } else {
-            echo "veuillez compléter la fiche candidat";//formations/se déconnecter
+            echo "veuillez compléter la fiche inscription candidat"; //formations/se déconnecter
             $this->formConnexion();
         }
     }
@@ -104,32 +105,22 @@ class CandidatController extends CandidatModel
     {
 
         $this->id_candidat = $_SESSION['id_candidat'];
-        $this->nom = trim($_POST['nom_candidat']);
-        $this->prenom = trim($_POST['prenom_candidat']);
-        $this->email = trim($_POST['email_candidat']);
-       
+        $this->nom_candidat = trim($_POST['nom']);
+        $this->prenom_candidat = trim($_POST['prenom']);
+        $this->email_candidat = trim($_POST['email']);
+
         if ($this->nom != '' && $this->prenom != '' && $this->email != '') {
             if ($this->updateCandidat()) {
-                $_SESSION['nom_candidat'] = $this->nom;
-                $_SESSION['prenom_candidat'] = $this->prenom;
-                $_SESSION['email_candidat'] = $this->email;
+                $_SESSION['nom'] = $this->nom_candidat;
+                $_SESSION['prenom'] = $this->prenom_candidat;
+                $_SESSION['email'] = $this->email_candidat;
                 echo 'Modification OK';
             }
         } else {
             $this->formMonCompte();
         }
     }
-/*  voir si necessaire ou faire function modifierMdp avec updateMdpCandidat sur Model?
-   public function formModifMdp()
-    {
-        $this->getCandidatById($_SESSION['id_candidat']); //$candidat
-        include('view/formModifMonMdp.php');
-    }
-*/
-//public function modifierMdp(){
-   // $this->id_candidat = $_POST['id_candidat'];
-    //$this->updateMdpCandidat();
-//}
+
     public function monCompte()
     {
         $candidat = $this->getCandidatById($_SESSION['id_candidat']);
