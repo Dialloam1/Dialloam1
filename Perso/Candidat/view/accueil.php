@@ -21,6 +21,7 @@
             margin-bottom: 20px;
         }
     </style>
+
     <form action="" method="post">
 
         <div class="label">
@@ -40,11 +41,12 @@
 
     <div>
         <h3>Première connexion ?</h3>
-        <button a href="?page=inscriptionCandidat"> Créer un compte</button>
+        <a href="?page=creerCompte"> <button type="submit">Créer un compte</button> </a>
+        <!--<button type="submit">Créer un compte</button>-->
     </div> <br> <br>
 
     <div>
-        <button a href="?page=listeDesFormations">Liste des formations</button>
+        <a href="?page=listeDesFormations">Liste des formations </a>
     </div>
 
 </main>

@@ -20,7 +20,7 @@ function verifMdp() {
   let mpass2 = document.getElementById("mdp2").value;
 
   if (mpass1 == " ") {
-    alert("merci d'entrer votre mot de passe");
+    alert("merci de renseigner votre mot de passe");
     return false;
   }
   
@@ -42,3 +42,27 @@ function verifMdp() {
   }
   return true;
 }
+
+/** 
+   *@$email=$_POST["email"];
+   *@$mdp=$_POST["mdp"];
+   *@$mdp2=$_POST["mdp2"];
+   *@$valider=$_POST["valider"];
+   
+   *if(isset($valider)){ 
+    *  if(empty($email))
+     *    $message='<div class="erreur">Veuillez renseigner l\'email.</div>';
+     * elseif(empty($mdp))
+      *   $message='<div class="erreur">veuillez renseigner le mot de passe </div>';
+      *elseif($mdp!=$mdp2)
+      *   $message='<div class="erreur">Les mots de passe ne sont pas identiques.</div>';
+      *else{
+        * $message='<div class="rappel"><b>Rappel:</b><br />';
+        * $message.='email: '.$email;
+        * $message.='</div>';
+      }
+   }
+   */
+
+
+

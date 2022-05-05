@@ -1,5 +1,5 @@
 <h2> Liste des formations </h2>
-
+<!--strong à enlever, posera le problème de style-->
 <div>
     <strong>Concepteur développeur d'application </strong><br>
     Campus: Créteil Brochure: site... candidature à partir du

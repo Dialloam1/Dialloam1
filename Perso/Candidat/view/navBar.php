@@ -6,14 +6,20 @@
         </button>
 
         <ul class="navbar-nav">
-            <li> <a href="?page=inscriptionCandidat"> page d'Accueil candidat</a></li>
-      
-               <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Formations</a>
-                </li>
+            <?php if (isset($_SESSION['email'])) { ?>
+
+
+                <li> <a href="?page=inscriptionCandidat"> Accueil candidat</a></li>
+
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Formations</a>
                 <li class="nav-item"><a class="nav-link" href="#">Profil</a>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="#">Déconnexion</a></li>
-              
+
+                </li>
+            <?php } else { ?>
+
+            <?php } ?>
         </ul>
 
     </div>

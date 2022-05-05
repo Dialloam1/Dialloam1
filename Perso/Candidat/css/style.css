@@ -1,36 +1,28 @@
-#acc {
-  display: block;
-  color: blue;
+footer {
+  height: 8rem;
+  width: 100%;
+  background-color: rgba(78, 33, 129, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  border-top: 20px solid grey;
+  
+  
 }
+footer>table tr td:hover {
+  background-color: white;
+}
+
 * {
   margin: 0px;
   padding: 0px;
   color: #333;
   box-sizing: border-box;
 }
-main {
-  width: 90%;
-  margin: auto;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 10rem;
-  margin: auto;
-}
-form > * {
-  align-self: flex-start;
-}
-form > button {
-  align-self: flex-end;
-}
-
-.error {
-  color: salmon;
-}
-.success {
-  color: lightseagreen;
+header>:hover{
+  background-color: white;
 }
 main {
   width: 90%;
@@ -43,29 +35,19 @@ form {
   width: 10rem;
   margin: auto;
 }
+.success {
+  color: lightseagreen;
+}
+main {
+  width: 90%;
+  margin: auto;
+}
+
 form > * {
   align-self: flex-start;
 }
 form > button {
   align-self: flex-end;
-}
-
-#error {
-  color: salmon;
-}
-.success {
-  color: lightseagreen;
-}
-footer {
-  height: 10rem;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: whitesmoke;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
 }
 .label {
   margin-bottom: 4px;
@@ -90,4 +72,12 @@ footer {
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  border: none;
+  background-color: #EE6600;
+  color: #FFFFFF;
+  width: 200px;
+  cursor: pointer;
 }

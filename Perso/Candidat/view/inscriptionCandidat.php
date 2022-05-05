@@ -19,7 +19,7 @@
         width: 200px;
         cursor: pointer;
     }
-
+   
     .label {
         margin-bottom: 24px;
         font: 15pt arial;
@@ -29,8 +29,18 @@
     .champ {
         margin-bottom: 20px;
     }
+    
+    .rappel {
+        font: 10pt arial;
+        color: #888888;
+        background-color: #EEEEEE;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
 </style>
-<form action="" method="post">
+
+<form method="post" action="envoi.php">
 
     <div class="label">
         <label for="email">Email</label>
@@ -51,7 +61,6 @@
         <button type="button"> Valider </button>
         <button type="button" onclick="verifMdp();"> Valider </button>
     </div>-->
-
     <div class="champ">
         <input type="submit" name="valider" value="Valider l'inscription" />
     </div>

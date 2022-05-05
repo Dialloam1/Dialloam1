@@ -28,17 +28,19 @@ class CandidatController extends CandidatModel
     }
 
     public function inscriptionCandidat()
+    
     {
         $this->email_candidat = trim($_POST['email']);
         $this->mdp_candidat = password_hash($_POST["mdp"], PASSWORD_DEFAULT);
         //var_dump($this->email_candidat,$this->mdp_candidat);
         //die();
-        // if ($this->email_candidat != '' && $this->mdp_candidat != '' && $this->password_verify != '') {
+        //if ($this->email_candidat != '' && $this->mdp_candidat != '' && $this->password_verify != '') {
         if ($this->email_candidat != '' && $this->mdp_candidat != '') {
             if ($this->setCandidat()) {
                 echo 'inscription OK';
             }
         } else {
+            echo 'inscription a échoué';
             $this->formInscriptionCandidat();
         }
     }
@@ -126,6 +128,20 @@ class CandidatController extends CandidatModel
         $candidat = $this->getCandidatById($_SESSION['id_candidat']);
         include_once('view/monCompte.php');
     }
+
+    public function updateFicheCandidat()
+    {
+        include_once('view/modifFicheCandidat.php');
+
+        if ($this->nom_candidat != '' && $this->prenom_candidat != '' && $this->date_naissance != '' && $this->genre != '' && $this->adresse_candidat != '' && $this->cp_candidat != '' && $this->ville_candidat != '' && $this->pays_candidat != '' && $this->tel_candidat != '' && $this->email_candidat != '' && $this->nationalite_candidat != '' && $this->lieu_naissance != '') {
+
+            echo 'Enregistrement ou mise à jour OK';
+        } else {
+            echo 'Votre enregistrement ou mise à jour a échoué';
+            $this->formFicheCandidat();
+        }
+    }
+
     public function listeDesCandidats()
     {
         $candidats = $this->getCandidatByEmail();
