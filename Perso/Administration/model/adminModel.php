@@ -1,7 +1,7 @@
 <?php
 include_once('bdd.php');
-//à compléter
-class AdminModel
+
+class AdminsModel
 {
     private $db;
     public function __construct()
@@ -9,58 +9,55 @@ class AdminModel
         $this->db = Bdd::connexion();
     }
 
-    public function setCandidat()
+    public function setAdmins()
     {
-        $query = $this->db->prepare("INSERT INTO candidat(nom,prenom,tel,email,mdp) VALUES(?,?,?,?,?)");
+        $query = $this->db->prepare("INSERT INTO administration(id_administration,nom_admin,prenom_admin,email_admin,mdp_admin,identifiant_admin,tel_admin,creation_admin,modif_admin,validite_admin,connexion_admin,id_role) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)");
         return $query->execute([$this->nom, $this->prenom, $this->tel, $this->email, $this->mdp]);
     }
 
-    public function getUsers()
+    public function getAdmins()
     {
-        $query = "SELECT users.*,roles.* FROM users left JOIN affecter ON users.id_user=affecter.id_user left JOIN roles ON roles.id_role=affecter.id_role ORDER BY users.nom";
+        $query = "SELECT administration.*,roles.* FROM administration left JOIN affecter ON administration.id_administration=affecter.id_administration left JOIN roles ON roles.id_role=affecter.id_role ORDER BY administration.nom_admin";
         return $this->db->query($query)->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getUserByEmail()
+    public function getAdminsByEmail()
     {
-        return $this->db->query("SELECT * FROM users left JOIN affecter ON users.id_user=affecter.id_user left JOIN roles ON roles.id_role=affecter.id_role  WHERE email='{$this->email}'")->fetch(PDO::FETCH_ASSOC);
+        return $this->db->query("SELECT * FROM administration left JOIN affecter ON administation.id_admin=affecter.id_admin left JOIN roles ON roles.id_role=affecter.id_role  WHERE email_admin='{$this->email_admin}'")->fetch(PDO::FETCH_ASSOC);
     }
     public function getRoles()
     {
         return $this->db->query("SELECT * FROM roles")->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getUserById($id)
+    public function getAdminById($id)
     {
-        return $this->db->query("SELECT * FROM users WHERE id_user=$id")->fetch(PDO::FETCH_ASSOC);
+        return $this->db->query("SELECT * FROM administration WHERE id_admin=$id")->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function updateUser()
+    public function updateAdmin()
     {
-        $query = $this->db->prepare("UPDATE users SET nom=?,prenom=?,tel=?,email=? WHERE id_user=?");
-        return $query->execute([$this->nom, $this->prenom, $this->tel, $this->email, $this->id_user]);
+        $query = $this->db->prepare("UPDATE administration SET nom_admin=?,prenom_admin=?,email_admin=?,tel_admin=?,creation_admin=?,validite_admin=?,id_administration=? WHERE id_administration=?");
+        return $query->execute([$this->nom_admin, $this->prenom_admin, $this->email_admin, $this->tel_admin, $this->creation_admin, $this->validite_admin, $this->id_administration]);
     }
 
 
-    public function getRoleUser($id_user)
+    public function getRoleAdmin($id_administration)
     {
-        return $this->db->query("SELECT * FROM affecter WHERE id_user=$id_user ")->fetch(PDO::FETCH_ASSOC);
+        return $this->db->query("SELECT * FROM affecter WHERE id_administration=$id_administration")->fetch(PDO::FETCH_ASSOC);
     }
-    public function updateRoleUser()
+    public function updateRoleAdmin()
     {
 
-        if ($this->getRoleUser($this->id_user)) {
-            $query = $this->db->prepare("UPDATE affecter SET id_role=? WHERE id_user=?");
-            return $query->execute([$this->id_role, $this->id_user]);
+        if ($this->getRoleAdmin($this->id_administration)) {
+            $query = $this->db->prepare("UPDATE affecter SET id_role=? WHERE id_administration=?");
+            return $query->execute([$this->id_role, $this->id_admin]);
         } else {
-            $query = $this->db->prepare("INSERT INTO affecter(id_role,id_user) VALUES(?,?)");
-            return $query->execute([$this->id_role, $this->id_user]);
+            $query = $this->db->prepare("INSERT INTO affecter(id_role,id_administration) VALUES(?,?)");
+            return $query->execute([$this->id_role, $this->id_administration]);
         }
     }
 
-    public function deleteUser()
-    {
-    }
 }
 
 

@@ -33,11 +33,19 @@ switch ($page) {
     case 'ficheCandidat':
         include_once('candidatController.php');
         $candidat = new CandidatController;
-        if (isset($_POST['email'])) {
+        if (isset($_POST['nom'])) {
             $candidat->ficheCandidat();
         } else {
             $candidat->formFicheCandidat();
         }
+        break;
+
+    case 'listeDesFormations':
+        include_once('view/listeDesFormations.php');
+
+        $formations = new FormationsController;
+        $formations->afficheFormations();
+
         break;
 
     case 'monCompte':
@@ -56,17 +64,16 @@ switch ($page) {
             $candidat->formMonCompte();
         }
         break;
-        
+
     default:
         include_once('candidatController.php');
 
         $candidat = new CandidatController;
 
-        if (isset($_POST['email'])) { 
-           $candidat->connexion();
-        }
-        else{
-             $candidat->formConnexion();
+        if (isset($_POST['email'])) {
+            $candidat->connexion();
+        } else {
+            $candidat->formConnexion();
         }
         break;
 }

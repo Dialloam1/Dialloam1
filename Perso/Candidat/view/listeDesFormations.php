@@ -1,32 +1,23 @@
 <h2> Liste des formations </h2>
-<!--strong à enlever, posera le problème de style-->
-<div>
-    <strong>Concepteur développeur d'application </strong><br>
-    Campus: Créteil Brochure: site... candidature à partir du
-</div>
-<button a href="#"> Se connecter pour candidater</button><br><br>
-<div>
-    <strong>Concepteur développeur d'application</strong> <br>
-    Campus: Distanciel Brochure: site... candidature à partir du
-</div>
-<button a href="#"> Se connecter pour candidater</button><br><br>
-<div>
-    <strong>Conduire un projet informatique</strong> <br>
-    Campus: Créteil Brochure: site... candidature à partir du
-</div>
-<button a href="#"> Se connecter pour candidater</button><br><br>
-<div>
-    <strong>Conduire un projet informatique</strong> <br>
-    Campus: Distanciel Brochure: site... candidature à partir du
-</div>
-<button a href="#"> Se connecter pour candidater</button><br><br>
-<div>
-    <strong>Spécialiste en maîtrise d’ouvrage des SI </strong><br>
-    Campus: Créteil Brochure: site... candidature à partir du
-</div>
-<button a href="#"> Se connecter pour candidater</button><br><br>
-<div>
-    <strong>Spécialiste en maîtrise d’ouvrage des SI</strong> <br>
-    Campus: Distanciel Brochure: site... candidature à partir du
-</div>
-<button a href="#"> Se connecter pour candidater</button>
+<strong>Sciences et technologies</strong> <br> <br>
+
+<a href="#">Concepteur développeur d’application(Créteil)</a>
+<button type="submit">Pour candidater, se connecter</button> 
+
+<a href="#">Concepteur développeur d’application(Distanciel)</a>
+<button type="submit">Pour candidater, se connecter</button>  
+
+<a href="#">Conduire un projet informatique(Créteil)</a> 
+<button type="submit">Pour candidater, se connecter</button> 
+
+<a href="#">Conduire un projet informatique(Distanciel)</a> 
+<button type="submit">Pour candidater, se connecter</button> 
+
+<a href="#">Conduire un projet informatique(Créteil)</a> 
+<button type="submit">Pour candidater, se connecter</button> 
+
+<a href="#">Spécialiste en maîtrise d’ouvrage des SI(Créteil)</a> 
+<button type="submit">Pour candidater, se connecter</button> 
+
+<a href="#">Spécialiste en maîtrise d’ouvrage des SI(Distanciel)</a> 
+<button type="submit">Pour candidater, se connecter</button> 

@@ -40,7 +40,7 @@
     }
 </style>
 
-<form method="post" action="envoi.php">
+<form method="post" action="" onsubmit="return verifMdp()">
 
     <div class="label">
         <label for="email">Email</label>
@@ -50,18 +50,13 @@
     <div class="label">
         <label for="mdp">Mot de passe</label>
         <input type="password" name="mdp" id="mdp" placeholder="entrez votre mdp" minlength="8" required>
-    </div> <br>
+    </div>
     <div class="label">
-        <label for="mdp"> Confirmer le mot de passe</label>
-        <input type="password" name="mdp" id="mdp2" placeholder=" confirmer votre mdp" minlength="8" required>
-    </div> <br>
+        <label for="mdp2"> Confirmer le mot de passe</label>
+        <input type="password" name="mdp2" id="mdp2" placeholder=" confirmer votre mdp" minlength="8" required>
+    </div> 
 
     <h5>(Choisir un mot de passe d'au moins 8 caractères)</h5> <br>
-    <!--<div>
-        <button type="button"> Valider </button>
-        <button type="button" onclick="verifMdp();"> Valider </button>
-    </div>-->
-    <div class="champ">
-        <input type="submit" name="valider" value="Valider l'inscription" />
-    </div>
+    
+    <button>Valider</button>
 </form>

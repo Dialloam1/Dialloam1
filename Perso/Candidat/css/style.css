@@ -1,19 +1,5 @@
-footer {
-  height: 8rem;
-  width: 100%;
-  background-color: rgba(78, 33, 129, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  border-top: 20px solid grey;
+
   
-  
-}
-footer>table tr td:hover {
-  background-color: white;
-}
 
 * {
   margin: 0px;
@@ -55,7 +41,7 @@ form > button {
   color: #aaaaaa;
 }
 .champ {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .erreur {
   font: 10pt arial;

@@ -22,26 +22,25 @@
         }
     </style>
 
-    <form action="" method="post">
+    <form action="" method="post" onsubmit="return connexion()">
 
         <div class="label">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="entrez votre email" required>
+            <input type="email" name="email" class="email" placeholder="entrez votre email" required>
         </div>
 
         <div class="label">
             <label for="mdp">Mot de passe</label>
-            <input type="password" name="mdp" id="mdp" placeholder="entrez votre mdp" minlength="8" required>
-        </div> <br>
+            <input type="password" name="mdp" class="mdp" placeholder="entrez votre mdp" minlength="8" required>
+        </div> 
 
-        <div class="champ">
-            <button type="submit" onclick="verifMdp();">Se connecter</button>
-        </div> <br> <br>
+           <button>Se connecter</button>
+        
     </form>
 
     <div>
         <h3>Première connexion ?</h3>
-        <a href="?page=creerCompte"> <button type="submit">Créer un compte</button> </a>
+        <a href="?page=creerCompte">Créer un compte </a>
         <!--<button type="submit">Créer un compte</button>-->
     </div> <br> <br>
 

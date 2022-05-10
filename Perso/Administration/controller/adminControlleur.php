@@ -4,11 +4,11 @@ include_once('model/adminModel.php');
 class AdminController extends AdminModel
 {
     protected $id_administration;
-    protected $nom;
-    protected $prenom;
-    protected $tel;
-    protected $email;
-    protected $mdp;
+    protected $nom_admin;
+    protected $prenom_admin;
+    protected $email_admin;
+    protected $mdp_admin;
+    protected $tel_admin;
     protected $id_role;
 
     public function formInscription()
@@ -21,13 +21,12 @@ class AdminController extends AdminModel
 
         $this->nom = trim($_POST['nom']);
         $this->prenom = trim($_POST['prenom']);
-        $this->tel = trim($_POST['tel']);
         $this->email = trim($_POST['email']);
         $this->mdp = password_hash($_POST["mdp"], PASSWORD_DEFAULT);
 
 
         if ($this->nom != '' && $this->prenom != '' && $this->email != '') {
-            if ($this->setCandidat()) {
+            if ($this->setAdmins()) {
                 echo 'inscription OK';
 
               mail($this->email, 'sujet', 'Bonjour, <br> Bienvenue !');
@@ -49,17 +48,17 @@ class AdminController extends AdminModel
         $this->mdp = $_POST["mdp"];
 
         if ($this->email != '' && $this->mdp != '') {
-            $user = $this->getUserByEmail();
+            $user = $this->getAdminByEmail();
 
             if (password_verify($this->mdp, $user['mdp'])) {
-                $_SESSION['nom'] = $user['nom'];
-                $_SESSION['prenom'] = $user['prenom'];
-                $_SESSION['email'] = $user['email'];
+                $_SESSION['nom'] = $admin['nom'];
+                $_SESSION['prenom'] = $admin['prenom'];
+                $_SESSION['email'] = $admin['email'];
 
-                $_SESSION['id_user'] = $user['id_user'];
+                $_SESSION['id_admin'] = $admin['id_administration'];
 
-                $_SESSION['role'] = $user['role'];
-                $_SESSION['id_role'] = $user['id_role'];
+                $_SESSION['role'] = $admin['role'];
+                $_SESSION['id_role'] = $admin['id_role'];
 
             }
         } else {
@@ -76,12 +75,12 @@ class AdminController extends AdminModel
 
     public function formModifMdp()
     {
-        $user = $this->getUserById($_SESSION['id_user']);
+        $user = $this->getAdminById($_SESSION['id_administration']);
         include('view/formModifMonMdp.php');
     }
     public function modifierMonCompte()
     {
-        $this->id_user = $_SESSION['id_user'];
+        $this->id_user = $_SESSION['id_administration'];
         $this->nom = trim($_POST['nom']);
         $this->prenom = trim($_POST['prenom']);
         $this->tel = trim($_POST['tel']);
@@ -89,7 +88,7 @@ class AdminController extends AdminModel
 
 
         if ($this->nom != '' && $this->prenom != '' && $this->email != '') {
-            if ($this->updateUser()) {
+            if ($this->updateAdmin()) {
                 $_SESSION['nom'] = $this->nom;
                 $_SESSION['prenom'] = $this->prenom;
                 $_SESSION['email'] = $this->email;
@@ -101,7 +100,7 @@ class AdminController extends AdminModel
     }
     public function monCompte()
     {
-        $user = $this->getUserById($_SESSION['id_user']);
+        $user = $this->getAdminById($_SESSION['id_administration']);
         include('view/connexion.php');
     }
     

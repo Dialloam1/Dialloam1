@@ -19,7 +19,7 @@ class CandidatController extends CandidatModel
     protected $mdp_candidat;
     protected $ine_bea;
     protected $nationalite_candidat;
-    protected $lieu_naissance;
+    
 
 
     public function formInscriptionCandidat()
@@ -28,19 +28,22 @@ class CandidatController extends CandidatModel
     }
 
     public function inscriptionCandidat()
-    
     {
         $this->email_candidat = trim($_POST['email']);
-        $this->mdp_candidat = password_hash($_POST["mdp"], PASSWORD_DEFAULT);
-        //var_dump($this->email_candidat,$this->mdp_candidat);
-        //die();
-        //if ($this->email_candidat != '' && $this->mdp_candidat != '' && $this->password_verify != '') {
-        if ($this->email_candidat != '' && $this->mdp_candidat != '') {
-            if ($this->setCandidat()) {
-                echo 'inscription OK';
+        $this->mdp_candidat = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
+        if ($this->email_candidat != '') {
+            $candidat = $this->getCandidatByEmail();
+            if ($candidat) {
+                echo ('email existant');
+                $this->formInscriptionCandidat();
+                
+            } else {
+                echo ('inscription établie');
+                $this->setCandidat();
+                header('Location: index.php');
             }
-        } else {
-            echo 'inscription a échoué';
+        }else{
+            echo("connexion ko");
             $this->formInscriptionCandidat();
         }
     }
@@ -52,17 +55,28 @@ class CandidatController extends CandidatModel
 
     public function ficheCandidat()
     {
-
-        $this->email_candidat = trim($_POST['email']);
-        $this->mdp_candidat = password_hash($_POST["mdp"], PASSWORD_DEFAULT);
-
-        if ($this->email_candidat != '' && $this->mdp_candidat != '' && $this->password_verify != '') {
-            if ($this->setCandidat()) {
-                echo 'inscription OK';
-            }
-        } else {
-            $this->formFicheCandidat();
-        }
+        $this->nom_candidat = trim($_POST['nom']);
+        $this->prenom_candidat = trim($_POST['prenom']);
+        $this->date_naissance = trim($_POST['dateDeNaissance']);
+        $this->nationalite_candidat = trim($_POST['nationalite']);
+        $this->tel_candidat = trim($_POST['tel1']);
+        $this->tel2_candidat = trim($_POST['tel2']);
+        $this->genre = trim($_POST['genre']);
+        $this->ine_bea = trim($_POST['ine_bea']);
+        $this->adresse_candidat = trim($_POST['adresse1']);
+        $this->adresse2_candidat = trim($_POST['adresse2']);
+        $this->cp_candidat = trim($_POST['cp']);
+        $this->ville_candidat = trim($_POST['ville']);
+       
+       
+          if ($this->nom_candidat != '' && $this->prenom_candidat != '' && $this->date_naissance != '' && $this->nationalite_candidat != '' && $this->tel_candidat != '')
+          {
+             if($this->updateCandidat()){
+             echo "merci d'avoir rempli la fiche";
+             }else {
+                $this->formFicheCandidat();
+             }
+          }
     }
 
     public function formConnexion()
@@ -84,13 +98,14 @@ class CandidatController extends CandidatModel
                 $_SESSION['prenom_candidat'] = $candidat['prenom_candidat'];
                 $_SESSION['email_candidat'] = $candidat['email_candidat'];
                 $_SESSION['id_candidat'] = $candidat['id_candidat'];
-                echo "connexion établie";
+                header('Location: index.php');
             }
         } else {
-            echo "veuillez compléter la fiche inscription candidat"; //formations/se déconnecter
+            echo "veuillez compléter la fiche inscription candidat";
             $this->formConnexion();
         }
     }
+
 
     public function deconnexion()
     {
@@ -103,9 +118,9 @@ class CandidatController extends CandidatModel
         $candidat = $this->getCandidatById($_SESSION['id_candidat']);
         include('view/formModifMonCompte.php');
     }
+
     public function modifierMonCompte()
     {
-
         $this->id_candidat = $_SESSION['id_candidat'];
         $this->nom_candidat = trim($_POST['nom']);
         $this->prenom_candidat = trim($_POST['prenom']);
@@ -127,19 +142,6 @@ class CandidatController extends CandidatModel
     {
         $candidat = $this->getCandidatById($_SESSION['id_candidat']);
         include_once('view/monCompte.php');
-    }
-
-    public function updateFicheCandidat()
-    {
-        include_once('view/modifFicheCandidat.php');
-
-        if ($this->nom_candidat != '' && $this->prenom_candidat != '' && $this->date_naissance != '' && $this->genre != '' && $this->adresse_candidat != '' && $this->cp_candidat != '' && $this->ville_candidat != '' && $this->pays_candidat != '' && $this->tel_candidat != '' && $this->email_candidat != '' && $this->nationalite_candidat != '' && $this->lieu_naissance != '') {
-
-            echo 'Enregistrement ou mise à jour OK';
-        } else {
-            echo 'Votre enregistrement ou mise à jour a échoué';
-            $this->formFicheCandidat();
-        }
     }
 
     public function listeDesCandidats()
