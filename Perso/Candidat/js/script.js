@@ -23,15 +23,18 @@ break;
 function verifMdp() {
   let mpass1 = document.getElementById("mdp").value;
   let mpass2 = document.getElementById("mdp2").value;
+  let input = document.querySelector("input");
 
   if (mpass1 == "") {
     alert("merci de renseigner votre mot de passe");
+    input.backgroundColor = "red";
     return false;
   } else {
     if (mpass1 === mpass2) {
       return true;
     } else {
       alert("veuillez retaper un mot de passe identique");
+      input.backgroundColor = "red";
       return false;
     }
   }
@@ -39,9 +42,11 @@ function verifMdp() {
 
 function connexion() {
   let email = document.querySelector(".email").value;
+  
 
   if (email == "") {
     alert("merci de renseigner votre email");
+   
     return false;
   }
 }

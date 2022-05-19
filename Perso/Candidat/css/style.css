@@ -1,69 +1,79 @@
-
-  
-
-* {
-  margin: 0px;
-  padding: 0px;
-  color: #333;
-  box-sizing: border-box;
+button {
+  border: none;
+  background-color: #ee6600;
+  color: #ffffff;
+  width: 200px;
+  height: auto;
+  padding: 1%;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
 }
-header>:hover{
-  background-color: white;
+
+button:hover {
+  background-color: rgb(59, 173, 71);
+  transition: ease-in-out 250ms;
 }
+/**
+div > button a {
+  background-color: rgb(59, 173, 71);
+  transition: ease-in-out 250ms;
+  width: 0px;
+  height: auto;
+}*/
+
+.centrer {
+  text-align: center;
+}
+.centre {
+  text-align: center;
+  margin:auto;
+  transition: ease-in-out 250ms;
+  width: 15%;
+
+}
+
 main {
   width: 90%;
   margin: auto;
+   text-align: center;
+  padding: 1%;
 }
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 10rem;
-  margin: auto;
-}
-.success {
-  color: lightseagreen;
-}
-main {
-  width: 90%;
-  margin: auto;
-}
-
-form > * {
-  align-self: flex-start;
-}
-form > button {
-  align-self: flex-end;
-}
-.label {
-  margin-bottom: 4px;
-  font: 10pt arial;
-  color: #aaaaaa;
-}
-.champ {
-  margin-bottom: 10px;
-}
-.erreur {
+.formInput {
   font: 10pt arial;
   color: #dd0000;
   background-color: #eeeeee;
-  padding: 10px;
+  padding: 60px;
   border-radius: 10px;
   margin-bottom: 10px;
-}
-.rappel {
-  font: 10pt arial;
-  color: #888888;
-  background-color: #eeeeee;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
 }
 
-input[type="submit"] {
-  border: none;
-  background-color: #EE6600;
-  color: #FFFFFF;
-  width: 200px;
-  cursor: pointer;
+footer {
+  height: 2rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+footer > :hover {
+  background-color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+  .formInput {
+    width: 95%;
+  }
 }

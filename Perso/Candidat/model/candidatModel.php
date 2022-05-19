@@ -5,6 +5,23 @@ include_once('bdd.php');
 class CandidatModel
 {
     private $db;
+    public $id_candidat;
+    public $nom_candidat;
+    public $prenom_candidat;
+    public $date_naissance;
+    public $genre;
+    public $adresse_candidat;
+    public $adresse2_candidat;
+    public $cp_candidat;
+    public $ville_candidat;
+    public $pays_candidat;
+    public $tel_candidat;
+    public $tel2_candidat;
+    public $email_candidat;
+    public $mdp_candidat;
+    public $ine_bea;
+    public $nationalite_candidat;
+
     public function __construct()
     {
         $this->db = Bdd::connexion();

@@ -40,18 +40,17 @@ switch ($page) {
         }
         break;
 
-    case 'listeDesFormations':
-        include_once('view/listeDesFormations.php');
-
-        $formations = new FormationsController;
-        $formations->afficheFormations();
-
-        break;
-
     case 'monCompte':
         include_once('candidatController.php');
         $candidat = new CandidatController;
         $candidat->monCompte();
+        break;
+
+    case 'listeDesFormations':
+        include_once('view/listeDesFormations.php');
+
+        $formation = new FormationsController;
+        $formation->afficheFormation();
         break;
 
     case 'modifierMonCompte':

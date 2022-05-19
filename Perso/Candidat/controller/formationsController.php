@@ -12,18 +12,18 @@ class FormationsController extends FormationsModel
     protected $id_administration;
   
 
-   public function afficheFormations()
+    public function afficheFormation()
   {
     $formations = $this->getFormations();
     include_once('view/listeDesFormations.php');
   }
-
-   public function afficheFormation()
+ 
+   /**public function afficheFormation()
   {
     $this->id_formation = $_GET['id_formation'];
 
-    $formation = $this->getFormationById('id_formation');
+   $formation = $this->getFormations('id_formation');
     include_once('view/listeDesFormations.php');
   }
-
+*/
 }

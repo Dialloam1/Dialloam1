@@ -1,6 +1,6 @@
 <h2> Modifier mon compte</h2>
 
-<form action="" method="post">
+<form class="formInput" method="post" action="modifierMonCompte()">
     <div>
         <label for="nom"> Nom</label>
         <input type="text" name="nom" id="nom" palceholder="votre nom" value="<?= $candidat['nom_candidat'] ?>">
@@ -17,5 +17,5 @@
         <label for="mdp">Mot de passe</label>
         <input type="password" name="mdp" id="mdp" placeholder="votre mot de passe">
     </div>
-    <button type="button"> Valider</button>
+    <button type="submit"> Valider</button>
 </form>

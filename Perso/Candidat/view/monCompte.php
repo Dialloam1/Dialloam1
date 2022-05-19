@@ -12,8 +12,6 @@
         email : <?= $candidat['email_candidat'] ?>
     </div>
     <div>
-   <!--
-    est ce qu'il faut mettre mdp? mdp2 aussi :prb sécurité ?
--->
+
     <a href="?page=modifierMonCompte">Modifier mon compte</a>
 </div>

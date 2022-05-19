@@ -1,6 +1,6 @@
 <h3>Modifier mot de passe de </h3>
 
-<form action="" method="post">
+<form class="formInput" action="" method="post">
     <div>
         <label for="email">Email</label>
         <input type="email" name="email" id="email" value="<?= $email['email_candidat'] ?>" placeholder="entrez votre email">
