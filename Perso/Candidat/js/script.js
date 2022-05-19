@@ -3,14 +3,19 @@ function verifForm(type, valeur) {
   switch (type) {
     case "nom":
     case "prenom":
-      result = preg_match("/^[a-zA-Z '-]+$/".test(valeur));
+      result = preg_match("/^[a-zA-Z '-]+$/".test(nom, prenom));
       break;
     case "email":
-      result = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(valeur);
+      result = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email);
       break;
     case "mdp":
-      result = /^[a-zA-Z'!?,;0-9._-]{}$/.test(valeur);
+      result = /^[a-zA-Z'!?,;0-9._-]{}$/.test(mdp);
       break;
+      case "tel1":
+       /**result = /^[0-12+]$/.test(valeur);
+       result = /^\d{10}$/;*/
+       result = /^[1-9]{1}[0-9]{8}$/.test(tel1);
+break;
   }
   return result;
 }

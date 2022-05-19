@@ -10,15 +10,24 @@
             width: 200px;
             cursor: pointer;
         }
-
         .label {
             margin-bottom: 24px;
             font: 15pt arial;
-            color: #AAAAAA;
+           
         }
-
-        .champ {
-            margin-bottom: 20px;
+        footer {
+            height: 2rem;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+        }
+        footer>:hover {
+            background-color: white;
         }
     </style>
 
@@ -32,10 +41,10 @@
         <div class="label">
             <label for="mdp">Mot de passe</label>
             <input type="password" name="mdp" class="mdp" placeholder="entrez votre mdp" minlength="8" required>
-        </div> 
+        </div>
 
-           <button>Se connecter</button>
-        
+        <button type="submit"> Se connecter</button>
+
     </form>
 
     <div>

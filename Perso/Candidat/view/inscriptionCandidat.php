@@ -12,31 +12,32 @@
 
 <h3> Inscrivez-vous</h3> <br>
 <style>
-    input[type="submit"] {
+    button[type="submit"] {
         border: none;
         background-color: #EE6600;
         color: #FFFFFF;
         width: 200px;
         cursor: pointer;
     }
-   
+    footer {
+        height: 2rem;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+    }
     .label {
         margin-bottom: 24px;
         font: 15pt arial;
         color: #AAAAAA;
     }
-
-    .champ {
-        margin-bottom: 20px;
-    }
-    
-    .rappel {
-        font: 10pt arial;
-        color: #888888;
-        background-color: #EEEEEE;
-        padding: 10px;
-        border-radius: 10px;
-        margin-bottom: 10px;
+    footer>:hover {
+        background-color: white;
     }
 </style>
 
@@ -54,9 +55,9 @@
     <div class="label">
         <label for="mdp2"> Confirmer le mot de passe</label>
         <input type="password" name="mdp2" id="mdp2" placeholder=" confirmer votre mdp" minlength="8" required>
-    </div> 
+    </div>
 
     <h5>(Choisir un mot de passe d'au moins 8 caractères)</h5> <br>
-    
-    <button>Valider</button>
+
+    <button type="submit">Valider</button>
 </form>

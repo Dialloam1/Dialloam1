@@ -11,7 +11,7 @@
     </div>
     <div>
         <label for="password">Confirmer le mot de passe</label>
-        <input type="password" name="mdp" id="mdp2" value="<?= $mdp['mdp_candidat'] ?>" placeholder="Saisir pour vérification">
+        <input type="password" name="mdp2" id="mdp2" value="<?= $mdp['mdp_candidat'] ?>" placeholder="Saisir pour vérification">
     </div>
 
     <button type="button">Valider</button>
