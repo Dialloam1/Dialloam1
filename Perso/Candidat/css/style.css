@@ -14,13 +14,10 @@ button:hover {
   background-color: rgb(59, 173, 71);
   transition: ease-in-out 250ms;
 }
-/**
-div > button a {
-  background-color: rgb(59, 173, 71);
-  transition: ease-in-out 250ms;
-  width: 0px;
-  height: auto;
-}*/
+
+.nav-item:hover {
+  background-color: rgb(174, 44, 116);
+}
 
 .centrer {
   text-align: center;
@@ -36,7 +33,7 @@ div > button a {
 main {
   width: 90%;
   margin: auto;
-   text-align: center;
+  text-align: center;
   padding: 1%;
 }
 .formInput {
@@ -49,27 +46,42 @@ main {
   text-align: center;
   width: 60%;
   margin: 0 auto;
+  
+}
+.formInput> div {
+  display: flex;
+  flex-wrap: nowrap;
+ justify-content: space-between;
 }
 
 footer {
   height: 2rem;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  color: grey;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   bottom: 0;
   text-align: center;
+  color: #ffffff;
 }
 footer > :hover {
-  background-color: white;
+  background-color: rgb(174, 44, 116);
 }
 
 a {
   color: white;
   text-decoration: none;
+}
+
+.btn-formation-flex{
+  display: flex; 
+  flex-direction:column
+}
+.btn-formation{ 
+   width:500px;
+   margin: 5px
 }
 
 @media screen and (max-width: 900px) {

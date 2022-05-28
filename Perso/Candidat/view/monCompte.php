@@ -12,6 +12,5 @@
         email : <?= $candidat['email_candidat'] ?>
     </div>
     <div>
-
     <a href="?page=modifierMonCompte">Modifier mon compte</a>
 </div>

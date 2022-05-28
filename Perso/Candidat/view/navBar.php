@@ -6,7 +6,11 @@
         </button>
         <div class="navbar-collapse collapse" id="navbarNav" style="">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0"><?php if (@$_SESSION['id_candidat']) { ?>
-                    <li class="nav-item">
+                <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#"><?=$_SESSION['nom_candidat']?> <?=$_SESSION['prenom_candidat']?></a>
+                    </li>
+          
+                <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="index.php?page=listeDesFormations">Formation</a>
                     </li>
                     <li class="nav-item">

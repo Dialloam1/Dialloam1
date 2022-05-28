@@ -1,8 +1,7 @@
 <?php
-
 include_once('bdd.php');
 
-class CandidatModel
+class CandidatModel extends CandidatController
 {
     private $db;
     public $id_candidat;

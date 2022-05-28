@@ -1,8 +1,12 @@
 <?php
 include_once('model/candidatModel.php');
 
-class CandidatController
+class CandidatController 
 {
+
+    private $model;
+ 
+
 
     public function __construct()
     {
@@ -87,7 +91,7 @@ class CandidatController
                 $_SESSION['prenom_candidat'] = $candidat['prenom_candidat'];
                 $_SESSION['email_candidat'] = $candidat['email_candidat'];
                 $_SESSION['id_candidat'] = $candidat['id_candidat'];
-                header('Location: index.php');
+                header('Location: index.php?page=listeDesFormations');
             }
         } else {
             echo "veuillez compléter la fiche inscription candidat";
@@ -120,7 +124,7 @@ class CandidatController
 
     public function listeDesCandidats()
     {
-        $candidats = $this->model->getCandidatByEmail();
+        $candidat = $this->model->getCandidatByEmail();
         include('view/listeDescandidats.php');
     }
 }

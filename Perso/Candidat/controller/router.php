@@ -47,10 +47,10 @@ switch ($page) {
         break;
 
     case 'listeDesFormations':
-        include_once('view/listeDesFormations.php');
+        include_once('formationsController.php');
 
         $formation = new FormationsController;
-        $formation->afficheFormation();
+        $formation->afficheFormations();
         break;
 
     case 'modifierMonCompte':

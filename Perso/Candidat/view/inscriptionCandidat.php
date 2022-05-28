@@ -8,10 +8,11 @@
     <li>Votre compte sera alors activé</li>
 </ol> <br> <br>
 <div class="centrer">
-    <h3> Inscrivez-vous</h3> <br>
+    
 
     <form class="formInput" method="post" action="?page=creerCompte" onsubmit="return verifMdp()">
-        <!--
+    <h3> Inscrivez-vous !</h3> 
+    <!--
     <div>
         <label for="email">Email</label>
         <input type="email" name="email" id="email" placeholder="entrez votre email" required>
