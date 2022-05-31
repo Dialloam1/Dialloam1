@@ -46,6 +46,10 @@ switch ($page) {
         $candidat->monCompte();
         break;
 
+    case 'mentionsLégales':
+        include_once('view/mentions.php');
+        break;
+
     case 'listeDesFormations':
         include_once('formationsController.php');
 

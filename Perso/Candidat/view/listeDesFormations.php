@@ -1,11 +1,16 @@
+<style>
+    table, th, td {
+  border: 3px solid black;
+}
+</style>
 <h2> Liste des formations </h2>
 <!-- Je parcours $formations et la valeur est copiée dans $form-->
-<table>
+<table >
     <thead>
         <th>Nom </th>
         <th>Lieu </th>
         <th>Régime </th>
-        <th>Début formation</th>
+        <th>Début candidature</th>
         <th>Brochure</th>
         <th>Site</th>
         <th>Action</th>
@@ -28,10 +33,11 @@
                     }
                     ?>
                 </td>
-                <td><?= $form['debut_formation']; ?> </td> <br>
+                <td><?= $form['info_debut_candidature']; ?> </td> <br>
                 <td> <?= $form['brochure_formation']; ?> </td>
-                <td><?= $form['site_formation']; ?></td>
+                <td> <a style="color: blue;" href="<?= $form['site_formation']; ?>"><?= $form['site_formation']; ?></a> </td>
             </tr>
         <?php } ?>
     </tbody>
 </table>
+

@@ -1,7 +1,7 @@
 <footer>
     <table>
         <tr>
-            <td>Mentions Légales</td>
+            <td> <a href="?page=mentions.php">Mentions Légales </a></td>
         </tr>
     </table>
 </footer>

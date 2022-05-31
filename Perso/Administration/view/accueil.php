@@ -16,9 +16,4 @@
 
 </form>
 
-<div>
-<h3>Première connexion?</h3>
-<a href="?page=creerCompte">Créer un compte </a>
-</div> 
-
 </main>
