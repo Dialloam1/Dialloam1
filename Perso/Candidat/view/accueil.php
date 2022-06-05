@@ -6,7 +6,7 @@
 
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing-sm">Email</span>
-            <input type="email" name="email" class="form-control" placeholder="Entrez votre email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+            <input type="email" name="email" class="form-control email" placeholder="Entrez votre email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" minlength="8">
         </div>
 
         <div class="input-group input-group-sm mb-3">

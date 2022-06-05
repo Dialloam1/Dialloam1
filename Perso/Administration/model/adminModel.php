@@ -41,7 +41,6 @@ class AdminsModel
         return $query->execute([$this->nom_admin, $this->prenom_admin, $this->email_admin, $this->tel_admin, $this->creation_admin, $this->validite_admin, $this->id_administration]);
     }
 
-
     public function getRoleAdmin($id_administration)
     {
         return $this->db->query("SELECT * FROM affecter WHERE id_administration=$id_administration")->fetch(PDO::FETCH_ASSOC);

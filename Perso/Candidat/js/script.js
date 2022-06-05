@@ -43,7 +43,6 @@ function verifMdp() {
 function connexion() {
   let email = document.querySelector(".email").value;
   
-
   if (email == "") {
     alert("merci de renseigner votre email");
    

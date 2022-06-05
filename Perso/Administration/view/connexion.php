@@ -6,7 +6,7 @@
 
         <div>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="entrez votre email" required minlength="8">
+            <input type="email" name="email" id="email" placeholder="entrez votre email" required>
         </div>
 
         <div>

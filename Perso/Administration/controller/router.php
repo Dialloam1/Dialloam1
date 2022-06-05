@@ -6,78 +6,41 @@ $page = @$_GET["page"];
 switch ($page) {
 
     case 'accueil':
-        include_once('candidatController.php');
-        $candidat = new CandidatController;
+        include_once('adminController.php');
+        $admin = new AdminController;
         if (isset($_POST['email'])) {
-            $candidat->connexion();
+            $admin->connexion();
         } else {
-            $candidat->formConnexion();
-        }
-        break;
-
-    case 'creerCompte':
-        include_once('candidatController.php');
-        $candidat = new CandidatController;
-        if (isset($_POST['email'])) {
-            $candidat->inscriptionCandidat();
-        } else {
-            $candidat->formInscriptionCandidat();
+            $admin->formConnexion();
         }
         break;
 
     case 'deconnexion':
-        include('candidatController.php');
-        $candidat = new CandidatController;
-        $candidat->deconnexion();
+        include('adminController.php');
+        $admin = new AdminController;
+        $admin->deconnexion();
         break;
 
-    case 'ficheCandidat':
-        include_once('candidatController.php');
-        $candidat = new CandidatController;
-        if (isset($_POST['nom'])) {
-            $candidat->ficheCandidat();
-        } else {
-            $candidat->formFicheCandidat();
-        }
-        break;
-
-    case 'monCompte':
-        include_once('candidatController.php');
-        $candidat = new CandidatController;
-        $candidat->monCompte();
-        break;
-
-    case 'mentionsLégales':
-        include_once('view/mentions.php');
-        break;
-
-    case 'listeDesFormations':
+    case 'Formations':
         include_once('formationsController.php');
 
         $formation = new FormationsController;
         $formation->afficheFormations();
         break;
 
-    case 'modifierMonCompte':
-        include('CandidatController.php');
-        $candidat = new CandidatController;
-
-        if (isset($_POST['email'])) {
-            $candidat->modifierMonCompte();
-        } else {
-            $candidat->formMonCompte();
-        }
-        break;
-
+        case 'mentionsLégales':
+            include_once('view/mentions.php');
+            break;
+            
     default:
-        include_once('candidatController.php');
+        include_once('adminController.php');
 
-        $candidat = new CandidatController;
+        $admin = new AdminController;
 
         if (isset($_POST['email'])) {
-            $candidat->connexion();
+            $admin->connexion();
         } else {
-            $candidat->formConnexion();
+            $admin->formConnexion();
         }
         break;
 }

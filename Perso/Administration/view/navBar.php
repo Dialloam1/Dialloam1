@@ -22,7 +22,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Déconnexion</a>
+                <a class="nav-link" href="#">Connexion</a>
             </li>
         </ul>
 

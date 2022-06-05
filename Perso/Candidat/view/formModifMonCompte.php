@@ -15,7 +15,7 @@
     </div>
     <div>
         <label for="mdp">Mot de passe</label>
-        <input type="password" name="mdp" id="mdp" placeholder="votre mot de passe" required>
+        <input type="password" name="mdp" id="mdp" placeholder="votre mot de passe" required minlength="8">
     </div>
     <button type="submit"> Valider</button>
 </form>

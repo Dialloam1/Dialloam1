@@ -5,13 +5,16 @@ $page = @$_GET["page"];
 switch ($page) {
 
     case 'accueil':
+
         include_once('candidatController.php');
+
         $candidat = new CandidatController;
         if (isset($_POST['email'])) {
             $candidat->connexion();
         } else {
             $candidat->formConnexion();
         }
+
         break;
 
     case 'creerCompte':
@@ -31,13 +34,14 @@ switch ($page) {
         break;
 
     case 'ficheCandidat':
-        include_once('candidatController.php');
-        $candidat = new CandidatController;
-        if (isset($_POST['nom'])) {
-            $candidat->ficheCandidat();
-        } else {
-            $candidat->formFicheCandidat();
-        }
+            include_once('candidatController.php');
+           
+            $candidat = new CandidatController;
+            if (isset($_POST['email'])) {
+                $candidat->ficheCandidat();
+            } else {
+                $candidat->formFicheCandidat();
+            } 
         break;
 
     case 'monCompte':
