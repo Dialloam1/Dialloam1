@@ -1,5 +1,4 @@
 <!--Fiche candidat-->
-
 <form class="formInput" method="post" action="" onsubmit="return ficheCandidat()">
     <h3>Fiche Candidat</h3>
     <div>
@@ -35,10 +34,10 @@
                 <span class="input-group-text" id="inputGroup-sizing-sm"> Autre Téléphone</span>
                 <input type="text" name="tel2" class="form-control" placeholder="votre n° de téléphone" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="<?= @$candidat['tel2_candidat'] ?>" minlength="10" maxlength="13">
             </div>
-            <div class="input-group input-group-sm mb-3">
+            <!--<div class="input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-sm"> Code INE/BEA</span>
-                <input type="text" name="ine_bea" class="form-control" placeholder="votre n° de téléphone" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="<?= @$candidat['tel2_candidat'] ?>" minlength="10" maxlength="13">
-            </div>
+                <input type="text" name="ine_bea" class="form-control" placeholder="votre code" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="<?= @$candidat['tel2_candidat'] ?>" minlength="10" maxlength="13">
+            </div>-->
             <div>
                 <label for="mdp"> Code INE/BEA</label>
                 <input type="text" name="ine_bea" class="code" placeholder="entrez votre code" value="<?= @$candidat['ine_bea'] ?>">
@@ -51,7 +50,7 @@
             </div>
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-sm">Complément d'adresse</span>
-                <input type="text" name="adresse2" class="form-control" placeholder="entrer votre adresse" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required value="<?= @$candidat['adresse2_candidat'] ?>">
+                <input type="text" name="adresse2" class="form-control" placeholder="entrer votre adresse" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="<?= @$candidat['adresse2_candidat'] ?>">
             </div>
 
             <div class="input-group input-group-sm mb-3">

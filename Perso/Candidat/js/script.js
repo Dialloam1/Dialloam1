@@ -41,11 +41,9 @@ function verifMdp() {
 }
 
 function connexion() {
-  let email = document.querySelector(".email").value;
-  
+  let email = document.querySelector("form-control").value;
   if (email == "") {
     alert("merci de renseigner votre email");
-   
     return false;
   }
 }

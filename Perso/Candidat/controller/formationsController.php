@@ -16,8 +16,5 @@ class FormationsController extends FormationsModel
   {
     $formations = $this->getFormations();
     include_once('view/listeDesFormations.php');
-
-  
   }
-  
 }

@@ -3,8 +3,8 @@
 <form action="" method="post" onsubmit="return connexion()">
 
 <div>
-    <label for="email">Email</label>
-    <input type="email" name="email" class="email" placeholder="entrez votre email" required>
+    <label for="email">Email ou identifiant</label>
+    <input type="email" name="email" class="email" placeholder="entrez votre email ou id" required>
 </div>
 
 <div>

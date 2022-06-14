@@ -2,14 +2,12 @@
 <!--page inscription-->
 <ol>
     <li>Créez un compte en renseignant le formulaire ci dessous</li>
-    <li>Vous recevrez un email sur l'adresse que vous aurez indiquée</li>
+   <!-- <li>Vous recevrez un email sur l'adresse que vous aurez indiquée</li>
     <li>Consultez votre messagerie, pour cliquer sur le lien de validation dans l'email recu.
-    </li>
+    </li>-->
     <li>Votre compte sera alors activé</li>
 </ol> <br> <br>
 <div class="centrer">
-    
-
     <form class="formInput" method="post" action="?page=creerCompte" onsubmit="return verifMdp()">
     <h3> Inscrivez-vous !</h3> 
     <!--
